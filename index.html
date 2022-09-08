@@ -4,12 +4,23 @@
     <meta charset="UTF-8">
     <title>TicTacToe</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="modal.css">
 </head>
 <body>
 <h1>Tic Tac Toe</h1>
 <div class="game-grid">
-
 </div>
+<button id="restart-btn" class="bg">Restart</button>
+
+<template id="modal-template">
+    <div id="modal-bg-fill">
+        <div id="win-modal" data-hidden="true">
+            <h1 class="winText">Winner!</h1>
+            <h2 class="userName"></h2>
+            <button>Restart</button>
+        </div>
+    </div>
+</template>
 </body>
 </html>
 <script src="script.js"></script>
