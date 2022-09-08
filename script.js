@@ -174,7 +174,7 @@ const GameBoard = (function () {
             let rCorrect = false
             let lCorrect = false
             if (rightCorner !==null)
-                rCorrect = diagLeft.every(el => el === rightCorner)
+                rCorrect = diagRight.every(el => el === rightCorner)
             if (leftCorner !==null)
                 lCorrect = diagLeft.every(el => el === leftCorner)
             return rCorrect || lCorrect
@@ -236,9 +236,9 @@ const GameBoard = (function () {
 
 function test() {
     let board = [
-        [0, null, null],
-        [null, 0, null],
-        [null, null, 0]]
+        [0, null, 1],
+        [null, 1, null],
+        [1, null, 0]]
     console.assert(GameBoard.checkWin(board))
     // console.assert(GameBoard.getCellIDFromIndexes(1, 2, 3) === 5)
     // console.assert(GameBoard.getCellIDFromIndexes(1, 1, 3) === 4)
